@@ -3,6 +3,7 @@ package snakegame.game;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Random;
+import javax.swing.JOptionPane;
 import javax.swing.Timer;
 import snakegame.Direction;
 import snakegame.domain.Apple;
@@ -99,9 +100,9 @@ public class SnakeGame extends Timer implements ActionListener {
             }
             updatable.update();
             setDelay(1000 / worm.getLength());
-            return;
+        } else {
+        JOptionPane.showMessageDialog (null, "Game Over!");
+        System.exit(0);
         }
-
     }
-
 }
