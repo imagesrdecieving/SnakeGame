@@ -56,7 +56,7 @@ public class SnakeGame extends Timer implements ActionListener {
     }
 
     private boolean appleCheck(Piece apple) {
-        return (worm.runsInto(apple) || (apple.getX() >= width) || (apple.getY() >= height));
+        return (worm.runsInto(apple) || (apple.getX() > width) || (apple.getY() > height));
     }
 
     public Snake getWorm() {
